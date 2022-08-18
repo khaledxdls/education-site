@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2.2rem;
+}
+
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    transition: all 0.3s;
+    overflow: hidden;
+    &_side {
+        width: 40rem;
+        height: 50rem;
+        padding: 2rem;
+        border-radius: 10px;
+        position: relative;
+        background-color: #134e4a;
+        overflow: hidden;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+        &-front {}
+        &-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg);
+            .items {
+                text-decoration: none;
+                list-style: none;
+                padding: 2rem 5rem;
+                padding-top: 8rem;
+                .item {
+                    color: #f7f7f7;
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    border-bottom: 2px solid #f7f7f7;
+                }
+            }
+        }
+    }
+    &:hover &_side-front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &_side-back {
+        transform: rotateY(0);
+    }
+    &_box {
+        overflow: hidden;
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 50%;
+        left: 40%;
+    }
+    &_img {
+        width: 80%;
+        &-1 {
+            width: 130% !important;
+        }
+    }
+}
+
+.card-1::after {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    position: absolute;
+    content: "Bronze";
+    display: block;
+    width: 21rem;
+    top: 3rem;
+    left: 65%;
+    height: 4rem;
+    padding-right: 3rem;
+    transform: rotate(38deg);
+    background-color: #cd7f32;
+}
+
+.card-2::after {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    position: absolute;
+    content: "Silver";
+    display: block;
+    padding-right: 3rem;
+    width: 21rem;
+    top: 3rem;
+    left: 65%;
+    height: 4rem;
+    transform: rotate(38deg);
+    background-color: #d6d3d1;
+}
+
+.card-3::after {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    padding-right: 3rem;
+    position: absolute;
+    content: "Gold";
+    display: block;
+    width: 21rem;
+    top: 3rem;
+    left: 65%;
+    height: 4rem;
+    transform: rotate(38deg);
+    background-color: #facc15;
+}

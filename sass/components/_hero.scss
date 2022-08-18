@@ -1,0 +1,32 @@
+.hero-img {
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.hero_img-box {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero_box_text {
+    color: #f7f7f7;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.hero_box_text2 {
+    color: #134e4a;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.comp_logo {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.2rem 2.4rem;
+}
+
+.logos {
+    width: 10%;
+}

@@ -1,0 +1,76 @@
+.cta {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 95%;
+    margin: 6rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    background-image: linear-gradient(to right bottom, #ece9e6, #ffffff);
+    &_text {
+        padding: 3rem;
+    }
+    &_img {
+        background-size: cover;
+        &-1 {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            background-size: cover;
+        }
+    }
+}
+
+.cta_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta_form input {
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(#fff, 0.5);
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    &::placeholder {
+        color: #999;
+    }
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid #00b894;
+        box-shadow: 0 1rem 2rem rgba(#000000, 0.1);
+        &:invalid {
+            border-bottom: 3px solid #ed2121;
+        }
+    }
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0rem;
+    display: block;
+    transition: all 0.3s;
+}
+
+input:placeholder-shown+label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+}
+
+.btn-sign {
+    background-color: #134e4a;
+    color: #f8fafc;
+    align-self: center;
+    width: 60%;
+}

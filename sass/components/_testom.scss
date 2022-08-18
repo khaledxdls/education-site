@@ -1,0 +1,131 @@
+.testem {
+    border-radius: 10px;
+    z-index: 8;
+    text-align: center;
+    padding: 5rem 15rem;
+    background-color: #fab1a0;
+    overflow: hidden;
+    height: 70rem;
+    position: relative;
+    &_box {
+        position: relative;
+    }
+    &_item {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        &-1 {
+            transform: translateX(0%);
+        }
+        &-2 {
+            transform: translateX(160%);
+        }
+        &-3 {
+            transform: translateX(-160%);
+        }
+        &-4 {
+            transform: translateX(360%);
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            color: #134e4a;
+            justify-content: flex-start;
+        }
+        &_box {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-img {
+            width: 8rem;
+            background-position: center;
+        }
+    }
+}
+
+blockquote {
+    background-color: #fab1a0;
+    border-left: 10px solid #6c5ce7;
+    font-size: 2.2rem;
+    color: #134e4a;
+    font-weight: 700;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #6c5ce7cc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+.flex {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.btn-slide {
+    background-color: #fab1a0;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    padding-bottom: 0.4rem;
+    font-size: 3rem;
+    z-index: 8;
+    border: 3px solid #134e4a;
+    transition: all 0.3s;
+    cursor: pointer;
+    &-left {
+        position: absolute;
+        top: 50%;
+        left: -8rem;
+        transform: translateY(30%);
+    }
+    &-right {
+        position: absolute;
+        top: 50%;
+        right: -8rem;
+        transform: translateY(30%);
+    }
+    &:hover {
+        box-shadow: 0 0.5rem 1rem rgba(#000000, 0.4);
+    }
+    &:active {
+        box-shadow: 0 0.2rem 1rem rgba(#000000, 0.4);
+    }
+}
+
+.dots {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-dots {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.active {
+    background-color: #777;
+}
